@@ -1,0 +1,24 @@
+[submodule "external/EsyMcuPlatform"]
+	path = external/EsyMcuPlatform
+	url = https://github.com/EsyProject/EsyMcuPlatform.git
+[submodule "external/FreeRTOS-Kernel"]
+	path = external/FreeRTOS-Kernel
+	url = https://github.com/raspberrypi/FreeRTOS-Kernel.git
+[submodule "external/CMSIS_5"]
+	path = external/CMSIS_5
+	url = https://github.com/ARM-software/CMSIS_5.git
+[submodule "external/cmsis-device-f4"]
+	path = external/cmsis-device-f4
+	url = https://github.com/STMicroelectronics/cmsis-device-f4.git
+[submodule "external/stm32f4xx-hal-driver"]
+	path = external/stm32f4xx-hal-driver
+	url = https://github.com/STMicroelectronics/stm32f4xx-hal-driver.git
+[submodule "external/micro-ecc"]
+	path = external/micro-ecc
+	url = https://github.com/kmackay/micro-ecc.git
+[submodule "external/SEGGER_RTT"]
+	path = external/SEGGER_RTT
+	url = https://github.com/SEGGERMicro/RTT.git
+[submodule "external/printf"]
+	path = external/printf
+	url = https://github.com/mpaland/printf.git
