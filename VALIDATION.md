@@ -9,17 +9,42 @@ The maintainer has tested UART OTA on Pico 2 and STM32F407ZGT6, including reboot
 and new-image confirmation.
 
 The current public platform pin is
-`395bffe5f1a8b732a3564dc17648d2b622dfaed0` (`v0.1.0`). It differs from the
-historical baseline below only in `CHANGELOG.md`; firmware source and build
-files are identical.
-
-The cross-build and host results below were recorded on 2026-10-28 against
-EsyMcuPlatform `81412da7b46fbc87c6cc62c78369ade2621c4d7a` and are retained as
-the automated baseline. Other pinned dependencies are listed in
+`ba305ef915598cc14710b9068bc9c63655267296`, fetched from `origin/main` on
+2026-11-07. Other pinned dependencies are listed in
 [DEPENDENCIES.md](DEPENDENCIES.md).
-The results below replace the earlier firmware sizes and migration evidence.
 
-## Public release dependency verification
+## Current platform verification (2026-11-07)
+
+All eight Release firmware configurations were configured and built in fresh
+`build/platform-compat-*` directories against the current platform pin, using
+GNU Arm Embedded 14.2.1, Pico SDK/picotool 2.1.1 and the pinned board/kernel
+providers. All eight builds passed without changes to demo-owned source or
+CMake files. Configure and build logs remain in each local build directory.
+
+| Configuration, Release | Linked Flash | Main RAM report |
+| --- | --- | --- |
+| Pico 2 `smp_hello` | 34,996 B | 21,936 B |
+| STM32F407ZGT6 `smp_hello` | 23,344 B | 18,480 B |
+| Pico 2 `bootloader` | 13,528 B | 1,600 B |
+| STM32F407ZGT6 `bootloader` | 11,672 B | 4,240 B |
+| Pico 2 `ota_update`, slot A, version 1 | 32,124 B | 14,204 B |
+| Pico 2 `ota_update`, slot B, version 2 | 32,124 B | 14,204 B |
+| STM32F407ZGT6 `ota_update`, slot A, version 1 | 40,116 B | 17,712 B |
+| STM32F407ZGT6 `ota_update`, slot B, version 2 | 40,116 B | 17,712 B |
+
+The current build checks establish compile/link compatibility. Host CTests,
+integration/artifact checks, package checks, owner harnesses and hardware OTA
+scenarios were not repeated for this upgrade; their records below describe the
+historical baseline.
+The memory accounting notes in the native firmware section also apply to the
+current table.
+
+The historical cross-build and host results below were recorded on 2026-10-28
+against EsyMcuPlatform `81412da7b46fbc87c6cc62c78369ade2621c4d7a` and are
+retained as the automated baseline, with the public release recheck recorded
+below.
+
+## Public release dependency verification (2026-10-29)
 
 On 2026-10-29, the pinned `v0.1.0` commit was fetched successfully from the public
 EsyMcuPlatform repository. All eight Release firmware configurations listed

@@ -10,7 +10,7 @@ describe the checked integration, not the newest available upstream releases.
 
 | Dependency | Checked revision | License |
 | --- | --- | --- |
-| [EsyMcuPlatform](https://github.com/EsyProject/EsyMcuPlatform) | `395bffe5f1a8b732a3564dc17648d2b622dfaed0` (`v0.1.0`) | Apache-2.0 |
+| [EsyMcuPlatform](https://github.com/EsyProject/EsyMcuPlatform) | `ba305ef915598cc14710b9068bc9c63655267296` (`origin/main`, checked 2026-11-07) | Apache-2.0 |
 | [FreeRTOS-Kernel](https://github.com/raspberrypi/FreeRTOS-Kernel) | `4f7299d6ea746b27a9dd19e87af568e34bd65b15` | MIT |
 | [CMSIS_5](https://github.com/ARM-software/CMSIS_5) | `2b7495b8535bdcb306dac29b9ded4cfb679d7e5c` | Apache-2.0 |
 | [cmsis-device-f4](https://github.com/STMicroelectronics/cmsis-device-f4) | `5f41fb29d22773896c780052bf61e47fc924d524` | Apache-2.0 |
@@ -35,7 +35,8 @@ newlib heap. Pico hello uses the Pico SDK formatter.
 No SDK, driver or kernel source is modified by this demo repository. Check each
 dependency's own license and notices for file-specific terms.
 
-The pinned EsyMcuPlatform commit is available from its public repository. It
-differs from the earlier checked integration revision only in `CHANGELOG.md`;
-the firmware sources and build files are identical. See
-[VALIDATION.md](VALIDATION.md) for the recorded checks.
+The pinned EsyMcuPlatform commit was fetched from its public `main` branch on
+2026-11-07. All eight Release firmware configurations were configured and built
+against this revision without changes to demo-owned source or CMake files. See
+[VALIDATION.md](VALIDATION.md) for the current build results and historical
+host and hardware verification records.
